@@ -1,0 +1,27 @@
+{
+  "name": "node-rest-server",
+  "version": "1.0.0",
+  "description": "- MongoDB\r - HTTP Request\r - Http verbs\r - Error codes\r - Express code errors\r - Global config",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/contracamilo/node-REST-server.git"
+  },
+  "keywords": [
+    "node",
+    "REST"
+  ],
+  "author": "Camilo Rivera QUintero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/contracamilo/node-REST-server/issues"
+  },
+  "homepage": "",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
