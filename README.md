@@ -20,9 +20,9 @@ Concepts:
 
 Don´t forget install mongoDB and create a local instance.
 
-More info: [https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/](MongoDB Docs)
+More info: ["https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/"](MongoDB Docs)
 
-Command to Run MongoDB a local instance:
+Command to run a MongoDB local instance:
 
 ``` cmd
 
