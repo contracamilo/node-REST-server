@@ -1,4 +1,5 @@
 const express = require("express");
+const mongoose = require("mongoose");
 const app = express();
 const bodyParser = require("body-parser");
 require("./config/config");
@@ -13,40 +14,20 @@ middlewares
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-//read
-app.get("/users", function (req, res) {
-	res.json("Hello World");
-});
+app.use(require("./routes/user"));
 
-//create
-app.post("/users", function (req, res) {
-	let {body} = req;
-
-	if (!body.name) {
-		res.status(400).json({
-			ok: false,
-			message: "name not found",
-		});
-	} else {
-		res.json({
-			user: body,
-		});
-	}
-});
-
-//update
-app.put("/users/:id", function (req, res) {
-	let {params} = req;
-
-	res.json({
-		id: params.id,
+const connectDB = async () => {
+	await mongoose.connect(process.env.URL_DB, {
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+		useFindAndModify: false,
+		useCreateIndex: true,
 	});
-});
 
-//delete
-app.delete("/users", function (req, res) {
-	res.json("Hello World");
-});
+	console.log("DB connected");
+};
+
+connectDB();
 
 app.listen(PORT, () => {
 	console.log(`listen on port: ${PORT}`);
