@@ -14,7 +14,8 @@ middlewares
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-app.use(require("./routes/user"));
+
+app.use(require("./routes/index"));
 
 const connectDB = async () => {
 	await mongoose.connect(process.env.URL_DB, {

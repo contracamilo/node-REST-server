@@ -94,10 +94,10 @@ To run this project run the following commands on console.
 
 Function to parse Jason Web tokens.
 
-´´´ JS
+```JS
 function parseJwt (token) {
     var base64Url = token.split('.')[1];
     var base64 = base64Url.replace('-', '+').replace('_', '/');
     return JSON.parse(window.atob(base64));
 };
-´´´
+```
